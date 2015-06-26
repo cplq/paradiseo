@@ -84,6 +84,25 @@ set(EDO_USE_LIB "Eigen3" CACHE STRING "Which linear algebra library to use to bu
 set(SMP "false" CACHE BOOL "Build the SMP module")
 set(MPI "false" CACHE BOOL "Build the MPI module")
 
+######################################################################################
+### jmp75 My changes
+######################################################################################
+
+option(BUILD_SHARED_LIBS "Build Shared Libraries" OFF)
+
+if(BUILD_SHARED_LIBS)
+	set(LIBARY_TYPE SHARED)
+else()
+	set(LIBARY_TYPE STATIC)
+endif()
+
+if(MSVC)
+	if(BUILD_SHARED_LIBS)
+		add_definitions(-D${PROJECT_NAME}_DLL)	# use or build Windows DLL
+	endif()
+endif()
+
+
 ## EO Module
 set(EO_MODULE_NAME "Evolving Object")
 set(CMAKE_SOURCE_DIR ${EO_SRC_DIR})
