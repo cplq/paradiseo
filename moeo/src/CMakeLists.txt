@@ -18,7 +18,7 @@ set(LIBRARY_OUTPUT_PATH ${MOEO_LIB_OUTPUT_PATH})
 
 set (MOEO_CORE core/moeoObjectiveVectorTraits.cpp)
 
-add_library(moeo STATIC ${MOEO_CORE})
+add_library(moeo ${LIBRARY_TYPE} ${MOEO_CORE})
 
 set(MOEO_VERSION ${GLOBAL_VERSION})
 set_target_properties(moeo PROPERTIES VERSION "${MOEO_VERSION}")

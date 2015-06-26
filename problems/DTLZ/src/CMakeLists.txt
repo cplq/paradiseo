@@ -26,7 +26,7 @@ SET (DTLZ_SOURCES
 		DTLZ6Eval.cpp
 		DTLZ7Eval.cpp)
 
-ADD_LIBRARY(lDTLZ STATIC ${DTLZ_SOURCES})
+ADD_LIBRARY(lDTLZ ${LIBRARY_TYPE} ${DTLZ_SOURCES})
 
 ######################################################################################
 

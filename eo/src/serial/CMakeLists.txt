@@ -19,7 +19,7 @@ set(EOSERIAL_SOURCES
     SerialString.cpp
   )
 
-add_library(eoserial STATIC ${EOSERIAL_SOURCES})
+add_library(eoserial ${LIBRARY_TYPE} ${EOSERIAL_SOURCES})
 install(TARGETS eoserial ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
 file(GLOB HDRS *.h)

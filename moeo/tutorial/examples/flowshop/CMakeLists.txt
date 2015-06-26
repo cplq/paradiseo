@@ -28,7 +28,7 @@ set(FLOWSHOP_SOURCES
 ### 4) Create flowshop library
 ######################################################################################
 
-add_library(flowshop STATIC ${FLOWSHOP_SOURCES})
+add_library(flowshop ${LIBRARY_TYPE} ${FLOWSHOP_SOURCES})
 add_dependencies(flowshop moeo)
 
 target_link_libraries(flowshop eo)

@@ -55,6 +55,7 @@
 #include <limits>
 #include <iostream>
 #include <cassert>
+#include <algorithm>
 
 #include <utils/eoRNG.h>
 

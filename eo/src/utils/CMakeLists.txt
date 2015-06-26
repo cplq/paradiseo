@@ -32,7 +32,7 @@ set(EOUTILS_SOURCES
   eoSignal.cpp
   )
 
-add_library(eoutils STATIC ${EOUTILS_SOURCES})
+add_library(eoutils ${LIBRARY_TYPE} ${EOUTILS_SOURCES})
 install(TARGETS eoutils ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
 

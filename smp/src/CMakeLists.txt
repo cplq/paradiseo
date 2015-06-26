@@ -35,7 +35,7 @@ set (SMP_FILE
     sharedFitContinue.h
     )
 
-add_library(smp STATIC ${SMP_FILE})
+add_library(smp ${LIBRARY_TYPE} ${SMP_FILE})
 
 install(TARGETS smp ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 

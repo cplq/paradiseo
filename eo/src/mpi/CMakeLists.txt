@@ -19,7 +19,7 @@ set(EOMPI_SOURCES
     implMpi.cpp
     )
 
-add_library(eompi STATIC ${EOMPI_SOURCES})
+add_library(eompi ${LIBRARY_TYPE} ${EOMPI_SOURCES})
 install(TARGETS eompi ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
 file(GLOB HDRS *.h)

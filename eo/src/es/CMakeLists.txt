@@ -37,10 +37,10 @@ set(CMA_SOURCES
   CMAParams.cpp
   )
 
-add_library(es STATIC ${ES_SOURCES})
+add_library(es ${LIBRARY_TYPE} ${ES_SOURCES})
 install(TARGETS es ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
-add_library(cma STATIC ${CMA_SOURCES})
+add_library(cma ${LIBRARY_TYPE} ${CMA_SOURCES})
 install(TARGETS cma ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
 ######################################################################################

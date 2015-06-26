@@ -136,8 +136,10 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 	    // add it to the checkpoint
 	    checkpoint->add(*bestStat);
 	    // check if monitoring with signal
-	    if ( mon_ctrlCParam.value() )
+#ifndef _MSC_VER
+		if (mon_ctrlCParam.value())
 		mon_ctrlCCont->add(*bestStat);
+#endif
 	}
 
     // Average fitness alone
@@ -151,8 +153,10 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 	    // add it to the checkpoint
 	    checkpoint->add(*averageStat);
 	    // check if monitoring with signal
-	    if ( mon_ctrlCParam.value() )
+#ifndef _MSC_VER
+		if (mon_ctrlCParam.value())
 		mon_ctrlCCont->add(*averageStat);
+#endif 
 	}
 
     // Second moment stats: average and stdev
@@ -166,8 +170,10 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 	    // add it to the checkpoint
 	    checkpoint->add(*secondStat);
 	    // check if monitoring with signal
-	    if ( mon_ctrlCParam.value() )
+#ifndef _MSC_VER
+		if (mon_ctrlCParam.value())
 		mon_ctrlCCont->add(*secondStat);
+#endif
 	}
 
     // Dump of the whole population
@@ -183,8 +189,10 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 	    // add it to the checkpoint
 	    checkpoint->add(*popStat);
 	    // check if monitoring with signal
-	    if ( mon_ctrlCParam.value() )
-		mon_ctrlCCont->add(*popStat);
+#ifndef _MSC_VER
+		if (mon_ctrlCParam.value())
+			mon_ctrlCCont->add(*secondStat);
+#endif
 	}
 
     // do we wnat some histogram of fitnesses snpashots?
@@ -206,10 +214,12 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 
 	    // when called by the checkpoint (i.e. at every generation)
 	    // check if monitoring with signal
-	    if ( ! mon_ctrlCParam.value() )
+#ifndef _MSC_VER
+		if (!mon_ctrlCParam.value())
 		checkpoint->add(*monitor);
 	    else
 		mon_ctrlCCont->add(*monitor);
+#endif
 
 	    // the monitor will output a series of parameters: add them
 	    monitor->add(*generationCounter);
@@ -221,10 +231,12 @@ eoCheckPoint<EOT>& do_make_checkpoint(eoParser& _parser, eoState& _state, eoValu
 		    tCounter = new eoTimeCounter;
 		    _state.storeFunctor(tCounter);
 		    // check if monitoring with signal
-		    if ( ! mon_ctrlCParam.value() )
+#ifndef _MSC_VER
+			if (!mon_ctrlCParam.value())
 			checkpoint->add(*tCounter);
 		    else
 			mon_ctrlCCont->add(*tCounter);
+#endif
 		    monitor->add(*tCounter);
 		}
 

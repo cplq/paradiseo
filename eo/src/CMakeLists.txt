@@ -20,7 +20,7 @@ set(EO_SOURCES
   eoSIGContinue.cpp
   )
 
-add_library(eo STATIC ${EO_SOURCES})
+add_library(eo ${LIBRARY_TYPE} ${EO_SOURCES})
 
 ######################################################################################
 ### 3) Optionnal: define your target(s)'s version: no effect for windows

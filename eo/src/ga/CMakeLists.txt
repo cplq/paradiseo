@@ -22,7 +22,7 @@ set(GA_SOURCES
   make_run_ga.cpp
   )
 
-add_library(ga STATIC ${GA_SOURCES})
+add_library(ga ${LIBRARY_TYPE} ${GA_SOURCES})
 install(TARGETS ga ARCHIVE DESTINATION ${LIB} COMPONENT libraries)
 
 ######################################################################################
