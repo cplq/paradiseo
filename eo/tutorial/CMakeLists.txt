@@ -9,7 +9,6 @@ set(CMAKE_BASE_BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../build64 )
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/../../cmake/ModulePaths.cmake)
 
-
 ######################################################################################
 ### 1) Where must cmake go now ?
 ######################################################################################

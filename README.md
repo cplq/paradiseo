@@ -17,3 +17,8 @@ cmake -LA  -G"Visual Studio 12 Win64" -DCMAKE_CONFIGURATION_TYPES:STRING=Debug;R
 msbuild /p:BuildConfiguration=Debug  /p:Platform=x64  ParadisEO.sln
 ```
 
+
+```cmd
+cd F:\src\github_jm\paradiseo\eo\tutorial\build
+cmake -LA  -G"Visual Studio 12 Win64" -DCMAKE_CONFIGURATION_TYPES:STRING=Debug;Release ..
+```
