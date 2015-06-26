@@ -24,6 +24,7 @@
 #ifndef EOREALBOUNDMODIFIER_H
 #define EOREALBOUNDMODIFIER_H
 
+#include <algorithm>
 #include <eoFunctor.h>
 #include <utils/eoRealVectorBounds.h>
 
@@ -95,7 +96,7 @@ public:
         double newMaxBound=(1-pow((double)genCounter.value()/stopCriteria,alpha))*_bnds.maximum(_i);
 
         // should delete the old eoRealBounds ?
-        _bnds[_i]=new eoRealInterval(_bnds.minimum(_i),std::max(_bnds.minimum(_i),newMaxBound));
+        _bnds[_i]=new eoRealInterval(_bnds.minimum(_i), std::max(_bnds.minimum(_i),newMaxBound));
     }
 
 

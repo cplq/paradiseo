@@ -75,7 +75,15 @@ protected:
 #ifdef _WINDOWS
 //here _WINDOWS is defined
 
-#include <WinBase.h>
+#include <windows.h>
+//#include <winbase.h>
+// prevent the unnecessary definition of max in minwindef.h. Causes havoc in compilation otherwise e.g. in eoRandomRealWeightUp
+#ifdef max
+#undef max
+#endif
+#ifdef min
+#undef min
+#endif
 
 template< class EOT >
 class eoEvalUserTimeThrowException : public eoEvalFuncCounter< EOT >
