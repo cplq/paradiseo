@@ -29,26 +29,31 @@ Old contact information: todos@geneura.ugr.es, http://geneura.ugr.es
  * @{
  * */
 
-# if (defined _MSC_VER)
+
 /** uint32_t is an unsigned integer type capable of holding 32 bits.
 
  In the applicatione here exactly 32 are used.
  64 bits might be better on an Alpha or other 64 bit systems with GCC at high
  optimization levels so feel free to try your options and see what's best for
  you.
-*/
-#ifndef _STDINT
-typedef unsigned long uint32_t;
-#endif
 
-#else
+
+ J-M 2015-06 
+ There used to be a MS specific section not using stdint.h:
+ # if (defined _MSC_VER)
+ // typedef unsigned long uint32_t;
+ This was a problem for programs using paradiseo and importing stdint.h
+ I think there is a requirement to have uint32_t at least 32 bits for Paradiseo.
+ Unless you compile 16 bit, no need to hack things around.
+ https://msdn.microsoft.com/en-us/library/ed98zksd.aspx
+
+*/
 #if (! defined __sun)
 // The C99-standard defines uint32_t to be declared in stdint.h, but some
 // systems don't have that and implement it in inttypes.h.
 #include <stdint.h>
 #else
 #include <inttypes.h>
-#endif
 #endif
 
 #include <cmath>
