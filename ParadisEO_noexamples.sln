@@ -1,0 +1,98 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{EE98BE2E-19FE-43DE-A635-6FB7849A8C53}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+		{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2} = {4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}
+		{1835B920-5A5A-4BD3-9DD9-B8D897E754F1} = {1835B920-5A5A-4BD3-9DD9-B8D897E754F1}
+		{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED} = {E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}
+		{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2} = {C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}
+		{9677E6E0-F358-483A-9A43-CA6F12D6EC9A} = {9677E6E0-F358-483A-9A43-CA6F12D6EC9A}
+		{5589610E-8533-4397-ABF7-7283CE6F4C95} = {5589610E-8533-4397-ABF7-7283CE6F4C95}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INSTALL", "INSTALL.vcxproj", "{6C81CBBD-DC21-4EC9-A856-FC23A2FF6507}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE98BE2E-19FE-43DE-A635-6FB7849A8C53} = {EE98BE2E-19FE-43DE-A635-6FB7849A8C53}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cma", "eo\src\es\cma.vcxproj", "{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eo", "eo\src\eo.vcxproj", "{1835B920-5A5A-4BD3-9DD9-B8D897E754F1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "eoutils", "eo\src\utils\eoutils.vcxproj", "{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "es", "eo\src\es\es.vcxproj", "{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ga", "eo\src\ga\ga.vcxproj", "{9677E6E0-F358-483A-9A43-CA6F12D6EC9A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "moeo", "moeo\src\moeo.vcxproj", "{5589610E-8533-4397-ABF7-7283CE6F4C95}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4} = {E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE98BE2E-19FE-43DE-A635-6FB7849A8C53}.Debug|x64.ActiveCfg = Debug|x64
+		{EE98BE2E-19FE-43DE-A635-6FB7849A8C53}.Debug|x64.Build.0 = Debug|x64
+		{EE98BE2E-19FE-43DE-A635-6FB7849A8C53}.Release|x64.ActiveCfg = Release|x64
+		{EE98BE2E-19FE-43DE-A635-6FB7849A8C53}.Release|x64.Build.0 = Release|x64
+		{6C81CBBD-DC21-4EC9-A856-FC23A2FF6507}.Debug|x64.ActiveCfg = Debug|x64
+		{6C81CBBD-DC21-4EC9-A856-FC23A2FF6507}.Release|x64.ActiveCfg = Release|x64
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}.Debug|x64.ActiveCfg = Debug|x64
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}.Debug|x64.Build.0 = Debug|x64
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}.Release|x64.ActiveCfg = Release|x64
+		{E00365F7-3F92-4AF3-A307-68CF7DEE7BA4}.Release|x64.Build.0 = Release|x64
+		{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}.Debug|x64.ActiveCfg = Debug|x64
+		{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}.Debug|x64.Build.0 = Debug|x64
+		{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}.Release|x64.ActiveCfg = Release|x64
+		{4A0A645C-CC9F-4AEB-87D0-1D7782F145F2}.Release|x64.Build.0 = Release|x64
+		{1835B920-5A5A-4BD3-9DD9-B8D897E754F1}.Debug|x64.ActiveCfg = Debug|x64
+		{1835B920-5A5A-4BD3-9DD9-B8D897E754F1}.Debug|x64.Build.0 = Debug|x64
+		{1835B920-5A5A-4BD3-9DD9-B8D897E754F1}.Release|x64.ActiveCfg = Release|x64
+		{1835B920-5A5A-4BD3-9DD9-B8D897E754F1}.Release|x64.Build.0 = Release|x64
+		{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}.Debug|x64.ActiveCfg = Debug|x64
+		{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}.Debug|x64.Build.0 = Debug|x64
+		{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}.Release|x64.ActiveCfg = Release|x64
+		{E831050F-3914-4AA3-B8E4-CC1C3E7D55ED}.Release|x64.Build.0 = Release|x64
+		{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}.Debug|x64.ActiveCfg = Debug|x64
+		{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}.Debug|x64.Build.0 = Debug|x64
+		{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}.Release|x64.ActiveCfg = Release|x64
+		{C33DDF22-87C9-48E9-9834-7DBD28FE2CE2}.Release|x64.Build.0 = Release|x64
+		{9677E6E0-F358-483A-9A43-CA6F12D6EC9A}.Debug|x64.ActiveCfg = Debug|x64
+		{9677E6E0-F358-483A-9A43-CA6F12D6EC9A}.Debug|x64.Build.0 = Debug|x64
+		{9677E6E0-F358-483A-9A43-CA6F12D6EC9A}.Release|x64.ActiveCfg = Release|x64
+		{9677E6E0-F358-483A-9A43-CA6F12D6EC9A}.Release|x64.Build.0 = Release|x64
+		{5589610E-8533-4397-ABF7-7283CE6F4C95}.Debug|x64.ActiveCfg = Debug|x64
+		{5589610E-8533-4397-ABF7-7283CE6F4C95}.Debug|x64.Build.0 = Debug|x64
+		{5589610E-8533-4397-ABF7-7283CE6F4C95}.Release|x64.ActiveCfg = Release|x64
+		{5589610E-8533-4397-ABF7-7283CE6F4C95}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

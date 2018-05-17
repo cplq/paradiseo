@@ -13,7 +13,7 @@ Needed to remove some visibly gcc specific compilation flags from the CMakeLists
 ```cmd
 mkdir build64
 cd build64
-cmake -LA  -G"Visual Studio 12 Win64" -DCMAKE_CONFIGURATION_TYPES:STRING=Debug;Release ..
+cmake -LA  -G"Visual Studio 12 Win64" -DENABLE_CMAKE_EXAMPLE:bool=true -DCMAKE_CONFIGURATION_TYPES:STRING=Debug;Release ..
 msbuild /p:BuildConfiguration=Debug  /p:Platform=x64  ParadisEO.sln
 ```
 
